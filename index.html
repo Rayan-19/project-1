@@ -16,7 +16,11 @@
             <ul>
                 <li><a href="#html">Learning HTML</a></li>
                 <li><a href="#vacation">Planning a Vacation</a></li>
-                <li><a href="contact">Contact Me</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="#favouritepet">favourite pet</a></li>
+                <li><a href="#favouritefood">favourite food</a></li>
+                <li><a href="#notes">Notes</a></li>
+                
             </ul>
         </nav>
     </header>    
@@ -91,6 +95,164 @@
                 </table>
             </section>
         </article>
+    <article id="vacation">
+        <section>
+            <h2>I Am Also Planning a Vacation</h2>
+            <p>I've been working hard and really need a getaway.<br>
+
+                I live in KS so I want visit a beach.<br>
+            </p>
+            <h3>Places I'd Like to Visit</h3>
+            <ul>
+                <li>
+                    I've heard good things about the Caribbean.
+                    <figure>
+                        <img src="img/caribbean.jpg" alt="caribbean beach" title="caribbean beach"> 
+                        <figcaption>Caribbean Beach Getaway</figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    I've heard good things about here.
+                    <address>
+                        Margaritaville Island Reserve Riviera Cancún
+                        Bahia Petempich Puerto Morelos, Mexico
+                        Colonia Morelos, México 77580
+                    </address>
+                    <figure>
+                        <img src="img/vacation.jpg" alt="vacation" title="vacation"> 
+                        <figcaption>A Caribbean Vacation Image</figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <dl>
+                <dt>North Pole</dt>
+                <dd>I hear it is cold</dd>
+                <dt>South pole</dt>
+                <dd>This is also cold</dd>
+                <dt>Mountain Tops</dt>
+                <dd>These are also cold.</dd>
+            </dl>
+        </section>
+    </article>
+    <article id="contact">
+        <section>
+            <h2>Contact Me</h2>
+            <p>I'd really like to hear from you!</p>
+            <form action="https://httpbin.org/get" method="get">
+                <fieldset>
+                    <legend>Personal info</legend>
+                    <p>
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" name="firstname" placeholder="rayan" autocomplete="on" required>
+                    </p>
+                    
+                    <p>
+                        <label for="lastname">last Name</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Hassan" autocomplete="on" required>
+
+                    </p>
+
+                    <p>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="your secret" autocomplete="on" required>
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="1234567890" autocomplete="on" required pattern="[0-9]{3}[0-9]{4}[0-9]{4}">
+                    </p>
+
+                    <p>
+                        <label for="decade">Favorite Decade</label>
+                        <input type="number" id="decade" name="decade" max="2025" min="1950" step="5" value="1950">
+                    </p>
+
+                   <p>
+                    <label for="coffee">Favorite Coffee</label>
+                    <select name="coffee" id="coffee" multiple size="5">
+                        <optgroup label="Coffees">
+                            <option value="regularcoffee">Regular Coffee</option>
+                            <option value="icedcoffee">Iced Coffee</option>
+                        </optgroup>
+                        <optgroup label="Espresso Drinks">
+                            <option value="cappuccino" selected>Cappuccino</option>
+                            <option value="latte">Latte</option>
+                            <option value="cortado">Cortado</option>
+                            <option value="americano">Americano</option>
+                        </optgroup>
+                        <optgroup label="others"></optgroup>
+                    </select>
+                   </p>
+
+                   <p>
+                    <label for="coffee">Favourite Coffee</label>
+                    <input type="text" id="coffee" list="coffee list" placeholder="type coffee name">
+                    <datalist id="coffee list">
+                        <option value="cappuccino"></option>
+                        <option value="latte"></option>
+                        <option value="cortado"></option>
+                        <option value="americano"></option>
+                        <option value="others"></option>
+                    </datalist>
+                    
+                   </p>
+
+                </fieldset>
+                <section id="favouritefood">
+                    <fieldset>
+                        <legend>What is your favourite food?</legend>
+                        <input type="radio" id="food" value="tacos" name="food">
+                        <label for="food">Tacos</label><br>
     
+                        <input type="radio" id="food" name="food" value="pizza">
+                        <label for="food">Pizza</label><br>
+    
+                        <input type="radio" id="food" name="food" value="others">
+                        <label for="food">Others</label><br>
+                    </fieldset>
+                </section>
+
+                <section id="favouritepet">
+                    <fieldset>
+                        <legend>What is your favourite pet?</legend>
+                        <input type="checkbox" id="pets" value="dogs" name="pets">
+                        <label for="pets">Dogs</label><br>
+    
+                        <input type="checkbox" id="pets" name="pets" value="cats">
+                        <label for="pets">Cats</label><br>
+    
+                        <input type="checkbox" id="pets" name="pets" value="rabbit">
+                        <label for="pets">Rabbit</label><br>
+    
+                        <input type="checkbox" id="pets" name="pets" value="fish">
+                        <label for="pets">Fish</label><br>
+    
+                        <input type="checkbox" id="pets" name="pets" value="others">
+                        <label for="pets">Others</label><br>
+                    </fieldset>
+    
+                </section>
+               <section id="notes">
+                <fieldset>
+                    <legend>Send Me A Notes</legend>
+                    <label for="message">Your message</label><br>
+                    <textarea name="message" id="message" placeholder="Type your message here" cols="30" rows="10"></textarea>
+                </fieldset>
+               </section>
+                <button type="submit">submit</button>
+                <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+                <button type="reset">reset</button>
+                <hr>
+            </form>
+        </section>
+    </article>
 </body>
 </html>
+
+
+
+        
+                    
+                    
